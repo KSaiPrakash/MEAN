@@ -1,0 +1,18 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  
+  <label>
+    First Name:
+      <input formControlName="firstName" />
+      <!-- <app-input-component [parentForm]="registrationForm" formControlName="firstName" [label]="'First Name'"
+      [formControlName]="firstName" ></app-input-component> -->
+  </label>
+  
+    <label>
+      Last Name:
+      <input formControlName="lastName" />
+      <!-- <app-input-component [parentForm]="registrationForm" formControlName="lastName" [label]="'Last Name'"
+      [formControlName]="lastName" ></app-input-component> -->
+    </label>
+    <!-- [disabled]="!registrationForm.valid" -->
+    <button type="submit" >Submit</button>
+  </form>
