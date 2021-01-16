@@ -11,6 +11,9 @@ export class RegistrationService {
   constructor(private http: HttpClient ) {}
 
   postProfile(profile): Observable<any> {
-       return this.http.post(`https://restcountries.eu/rest/v2/region/asia`, profile)
+    /**
+     * https://restcountries.eu/rest/v2/region/asia
+     */
+       return this.http.post('http://localhost:3000/api/registration', profile)
   }
 }
